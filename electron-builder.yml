@@ -1,0 +1,11 @@
+copyright: halo
+productName: electron-demos
+artifactName: ${productName}-${os}-${arch}-${version}.${ext}
+files:
+  - "main.js"
+  - ".deploy/**"
+asar: true
+compression: maximum
+nsis:
+  perMachine: true
+  oneClick: true
