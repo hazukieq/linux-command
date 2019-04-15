@@ -2,7 +2,7 @@ copyright: halo
 productName: linux-command
 artifactName: ${productName}-${os}-${arch}-${version}.${ext}
 files:
-  - "main.js"
+  - "*.js"
   - ".deploy/**"
 asar: true
 compression: maximum
