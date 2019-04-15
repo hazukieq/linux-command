@@ -1,5 +1,5 @@
 copyright: halo
-productName: electron-demos
+productName: linux-command
 artifactName: ${productName}-${os}-${arch}-${version}.${ext}
 files:
   - "main.js"
