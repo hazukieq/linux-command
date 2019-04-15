@@ -1,22 +1,21 @@
-const electron = require('electron')
-const app = electron.app
-const BrowserWindow = electron.BrowserWindow
+const { app, BrowserWindow } = require('electron')
 
 const path = require('path')
 const url = require('url')
+
+require('./menu.js')
 
 let mainWindow
 
 function createWindow () {
 
   mainWindow = new BrowserWindow({width: 1024, height: 768})
-  mainWindow.setMenu(null)
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, '.deploy/index.html'),
     protocol: 'file:',
     slashes: true
   }))
-  // mainWindow.webContents.openDevTools()
+
   mainWindow.on('closed', function () {
     mainWindow = null
   })
