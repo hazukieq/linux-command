@@ -1,6 +1,7 @@
 
 Linux Command 桌面版 ![](https://img.shields.io/npm/l/whistle.svg?style=flat-square)
-=========================================================================================
+<img src="logo.png" align="right" width="30" heigh="auto">
+===
 
 ![软件截图](./mac-screenshot.png)
 
