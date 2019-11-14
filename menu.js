@@ -28,6 +28,10 @@ let template = [{
     label: '全选',
     accelerator: 'CmdOrCtrl+A',
     role: 'selectall'
+  }, {
+    label: '退出',
+    accelerator: 'CmdOrCtrl+Q',
+    role: 'quit'
   }]
 }, {
   label: '查看',

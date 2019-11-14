@@ -7,6 +7,27 @@ Linux Command 桌面版 ![](https://img.shields.io/npm/l/whistle.svg?style=flat-
 
 <br>
 
+## 快速上手
+
+### 依赖安装
+```shell
+yarn
+```
+
+### 构建静态页面
+```shell
+yarn build
+```
+
+### 启动
+```shell
+yarn start
+```
+### 打包
+```
+yarn pack
+```
+
 ## 说明
 基于 [jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command) web 版本制作的桌面版应用。
 
