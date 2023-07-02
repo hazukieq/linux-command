@@ -1,20 +1,31 @@
-name: Jekyll site CI
-
+name: Build release
+#触发workflow事件
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
     branches: [ "master" ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the site in the jekyll/builder container
+    - name: checkout codes
+      uses: actions/checkout@v3
+    
+    - name: setup-node
+      uses: actions/setup-node@v2.5.2
+      
+    - name: npm install and build
       run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        npm install yarn
+        yarn -V
+        yarn build
+        yarn pack
+        
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        # Artifact name
+        name: release
+        # A file, directory or wildcard pattern that describes what to upload
+        path: ${{github.workspace}}/build
+        # The desired behavior if no files are found using the provided path.
